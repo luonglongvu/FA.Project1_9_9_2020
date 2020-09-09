@@ -1,0 +1,83 @@
+﻿@model IEnumerable<FA.Project.Model.ClassAdmin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Class Admin</h1>
+
+<p>
+    <a asp-action="Create" style="color:green;font-size:24px"><i class="fas fa-folder-plus"></i>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuditTrail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isDelete)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuditTrail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isDelete)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ClassAdminId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ClassAdminId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ClassAdminId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

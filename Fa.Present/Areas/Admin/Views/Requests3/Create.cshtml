@@ -1,0 +1,95 @@
+﻿@model FA.Project.Model.Request
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Request</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Requesttype" class="control-label"></label>
+                @*<select asp-for="Requesttype" class="form-control"></select>*@
+                <select asp-for="Requesttype" class="form-control" asp-items="@Html.GetEnumSelectList<FA.Project.Model.Request.RequestType>()"></select>
+                <span asp-validation-for="Requesttype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reason" class="control-label"></label>
+                <input asp-for="Reason" class="form-control" />
+                <span asp-validation-for="Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComimmingTime" class="control-label"></label>
+                <input asp-for="ComimmingTime" class="form-control" />
+                <span asp-validation-for="ComimmingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeavingTime" class="control-label"></label>
+                <input asp-for="LeavingTime" class="form-control" />
+                <span asp-validation-for="LeavingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpectedApproval" class="control-label"></label>
+                <input asp-for="ExpectedApproval" class="form-control" />
+                <span asp-validation-for="ExpectedApproval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApprovedTime" class="control-label"></label>
+                <input asp-for="ApprovedTime" class="form-control" />
+                <span asp-validation-for="ApprovedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                @*<select asp-for="Status" class="form-control"></select>*@
+                <select asp-for="Status" class="form-control" asp-items="@Html.GetEnumSelectList<FA.Project.Model.Request.StatusDetail>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTrail" class="control-label"></label>
+                <input asp-for="AuditTrail" class="form-control" />
+                <span asp-validation-for="AuditTrail" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="isDelete" /> @Html.DisplayNameFor(model => model.isDelete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TraineeId" class="control-label"></label>
+                <select asp-for="TraineeId" class ="form-control" asp-items="ViewBag.TraineeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApproverId" class="control-label"></label>
+                <select asp-for="ApproverId" class="form-control" asp-items="ViewBag.ClassAdminId"></select>
+                @*<input asp-for="ApproverId" class="form-control" />
+        <span asp-validation-for="ApproverId" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

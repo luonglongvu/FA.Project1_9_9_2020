@@ -1,0 +1,124 @@
+﻿@model IEnumerable<FA.Project.Model.Trainee>
+
+@{
+    ViewData["Title"] = "listAddtrainee";
+}
+
+<h1>List add</h1>
+
+<div>
+    <h4>ClassBatch</h4>
+</div>
+
+<div class="table-responsive-sm" style="overflow-x:auto">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Select
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateOfBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Account)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Skill)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ForeignLanguage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Level)
+                </th>
+                @*<th>
+                        University
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.AllocationStatus)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Account)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Skill)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ForeignLanguage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Level)
+                    </td>
+                    @*<td class="input-group-text">
+                            <input type="text" aria-label="Checkbox for following text input">
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AllocationStatus)
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    <div>
+        <form asp-action="listAddtrainee">
+            <input type="submit" value="Add trainee" class="btn btn-success" />
+        </form>
+    </div>
+
