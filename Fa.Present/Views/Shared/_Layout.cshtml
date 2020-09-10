@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" >
             <div class="container">
-                <div id="imageLogo"></div>
+                <div class="imageLogo">
+                    <img class="imageLogo" src="~/css/FPTlogo.png" />
+                </div>
                  <a class=" navbar-brand" id="BigText" asp-area="" asp-controller="Home" asp-action="Index">
                     Time Manage System</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -24,17 +27,6 @@
                         <ul class="navbar-nav flex-grow-1" id="linkA">
                             <li class="nav-item">
                                 <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                         
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Requests
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Requests3" asp-action="Create" style="color:black">Create request</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Requests3" asp-action="Index" style="color:black">All Request</a>
-                                </div>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -80,19 +72,16 @@
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Trainers" asp-action="Index">All Trainers</a>
                                 </div>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link " asp-area="Admin" asp-controller="Requests2" asp-action="Index">Manage requests AD</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+        
+
+        @RenderBody()
     </div>
 
     <footer class="border-top footer text-muted">

@@ -11,7 +11,7 @@
 </div>
 
 <div class="table-responsive-sm" style="overflow-x:auto">
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>
@@ -20,9 +20,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.FullName)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DateOfBirth)
-                </th>
+                
                 <th>
                     @Html.DisplayNameFor(model => model.Gender)
                 </th>
@@ -42,23 +40,6 @@
                     @Html.DisplayNameFor(model => model.Status)
                 </th>
 
-                <th>
-                    @Html.DisplayNameFor(model => model.Skill)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ForeignLanguage)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Level)
-                </th>
-                @*<th>
-                        University
-                    </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.AllocationStatus)
-                </th>
-
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -71,9 +52,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.FullName)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateOfBirth)
-                    </td>
+                    
                     <td>
                         @Html.DisplayFor(modelItem => item.Gender)
                     </td>
@@ -92,25 +71,6 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Status)
                     </td>
-
-
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Skill)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ForeignLanguage)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Level)
-                    </td>
-                    @*<td class="input-group-text">
-                            <input type="text" aria-label="Checkbox for following text input">
-                        </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AllocationStatus)
-                    </td>
-
-
                 </tr>
             }
         </tbody>

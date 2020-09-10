@@ -65,7 +65,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    witdth: 100%;
+    width: 100%;
 }
 
 .footer {
@@ -84,7 +84,8 @@ body {
     padding-left: 7px;
     display: flex;
     flex: none;
-    margin-top: -56px;
+    margin-top: -4px;
+    margin-left: 16%;
 }
 
 #allColor {
@@ -118,11 +119,9 @@ header {
     background-size: cover;
 }
 
-#imageLogo {
-    background-image: url(./FPTlogo.png);
+.imageLogo {
     height: 35px;
-    width: 55px;
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
+    width: auto;
+    margin-right: -12%;
+    margin-left: 1%;
 }

@@ -31,20 +31,7 @@ namespace Fa.Present.Areas.Admin.Controllers
         // GET: Admin/ClassBatches/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            //if (id == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //var classBatch = await _context.ClassBatches
-            //    .FirstOrDefaultAsync(m => m.ClassId == id);
-
-            //if (classBatch == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //return View(classBatch);
+            
             var tMSContext = _context.Trainees.Include(t => t.ClassBatch).Where(t => t.ClassBatchId == id);
             return View(await tMSContext.ToListAsync());
         }
@@ -256,7 +243,22 @@ namespace Fa.Present.Areas.Admin.Controllers
             ViewData["ClassBatchId"] = new SelectList(_context.ClassBatches, "ClassId", "AuditTrail", trainee.ClassBatchId);
             return View(trainee);
         }
+        // GET: Admin/ClassBatches/Details/listAddtrainee
+        public async Task<IActionResult> DeatilsTrainee(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var trainee = await _traineeServices.GetByIdAsync((int)id);
+            if (trainee == null)
+            {
+                return NotFound();
+            }
 
+            return View(trainee);
+        }
+       
         private bool ClassBatchExists(int id)
         {
             return _context.ClassBatches.Any(e => e.ClassId == id);
