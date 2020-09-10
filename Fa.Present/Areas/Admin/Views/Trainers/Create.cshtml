@@ -8,7 +8,133 @@
 
 <h4>Trainer</h4>
 <hr />
+
 <div class="row">
+
+    <table class="table table-bordered">
+        <form asp-action="Create">
+
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="FullName" class="control-label"></label>
+                            <input asp-for="FullName" class="form-control" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="DateOfBirth" class="control-label"></label>
+                            <input asp-for="DateOfBirth" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Gender" /> @Html.DisplayNameFor(model => model.Gender)
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber" class="control-label"></label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Account" class="control-label"></label>
+                            <input asp-for="Account" class="form-control" />
+                            <span asp-validation-for="Account" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Status" class="control-label"></label>
+                            <input asp-for="Status" class="form-control" />
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Type" class="control-label"></label>
+                            <input asp-for="Type" class="form-control" />
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Unit" class="control-label"></label>
+                            <input asp-for="Unit" class="form-control" />
+                            <span asp-validation-for="Unit" class="text-danger"></span>
+                        </div>
+                    </td>
+                <tr>
+
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Major" class="control-label"></label>
+                            <input asp-for="Major" class="form-control" />
+                            <span asp-validation-for="Major" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Experience" class="control-label"></label>
+                            <input asp-for="Experience" class="form-control" />
+                            <span asp-validation-for="Experience" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Remarks" class="control-label"></label>
+                            <input asp-for="Remarks" class="form-control" />
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="AuditTrail" class="control-label"></label>
+                            <input asp-for="AuditTrail" class="form-control" />
+                            <span asp-validation-for="AuditTrail" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="isDelete" /> @Html.DisplayNameFor(model => model.isDelete)
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>
+
+
+@*<div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -91,7 +217,7 @@
 
 <div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div>*@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

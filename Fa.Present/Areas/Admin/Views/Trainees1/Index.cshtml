@@ -17,65 +17,23 @@
                     @Html.DisplayNameFor(model => model.FullName)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DateOfBirth)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.Gender)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.PhoneNumber)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FamilyPhoneNumber)
-                </th>
+
                 <th>
                     @Html.DisplayNameFor(model => model.Email)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ExternalEmail)
-                </th>
+
                 <th>
                     @Html.DisplayNameFor(model => model.Account)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.OnboardDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Status)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Remarks)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.University)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Faculty)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Skill)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ForeignLanguage)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Level)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CV)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.AllocationStatus)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AuditTrail)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.isDelete)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ClassBatch)
-                </th>
+
                 <th></th>
             </tr>
         </thead>
@@ -84,70 +42,31 @@
             {
                 <tr style="border:1px solid yellow">
                     <td>
-                        @Html.DisplayFor(modelItem => item.FullName)
+                        <a asp-action="Edit" asp-route-id="@item.TraineeId">@Html.DisplayFor(modelItem => item.FullName)</a>
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateOfBirth)
-                    </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => item.Gender)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.PhoneNumber)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FamilyPhoneNumber)
-                    </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ExternalEmail)
-                    </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => item.Account)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.OnboardDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Status)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Remarks)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.University)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Faculty)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Skill)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ForeignLanguage)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Level)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CV)
-                    </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => item.AllocationStatus)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AuditTrail)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.isDelete)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ClassBatch.AuditTrail)
-                    </td>
+
+
                     <td style="width:100px">
-                        <a asp-action="Edit" asp-route-id="@item.TraineeId">Edit</a> |
+                        |
                         <a asp-action="Details" asp-route-id="@item.TraineeId">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.TraineeId">Delete</a>
                     </td>
@@ -155,4 +74,4 @@
             }
         </tbody>
     </table>
-    </div>
+</div>

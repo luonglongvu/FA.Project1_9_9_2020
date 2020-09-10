@@ -109,11 +109,6 @@ namespace FA.Project.Model
             context.ClassBatches.AddRange(classBatches);
 
 
-
-
-        
-
-
             var trainers = new Trainer[]
             {
                 new Trainer()

@@ -82,9 +82,6 @@ namespace Fa.Present.Areas.Admin.Controllers
                 return NotFound();
             }
             var trainee = await _traineeServices.GetByIdAsync((int)id);
-            //var trainee = await _context.Trainees
-            //    .Include(t => t.ClassBatch)
-            //    .FirstOrDefaultAsync(m => m.TraineeId == id);
             if (trainee == null)
             {
                 return NotFound();
@@ -151,8 +148,6 @@ namespace Fa.Present.Areas.Admin.Controllers
                 try
                 {
                     await _traineeServices.UpdateAsync(trainee);
-                    //_context.Update(trainee);
-                    //await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {

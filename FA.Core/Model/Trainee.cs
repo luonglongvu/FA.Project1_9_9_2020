@@ -67,8 +67,6 @@ namespace FA.Project.Model
         [StringLength(255, ErrorMessage = "The {0} must be between {1} and {2} characters", MinimumLength = 3)]
         public string AllocationStatus { get; set; }
        
-        //[Required(ErrorMessage = "The {0} must be required")]
-        //[StringLength(255, ErrorMessage = "The {0} must be between {1} and {2} characters", MinimumLength = 3)]
         public string AuditTrail { get; set; }
       
         [DefaultValue(false)]
